@@ -1,0 +1,213 @@
+@import url("./reset.css");
+@import url("./media-queries.css");
+
+
+/*General Settings*/
+body {
+	background-color: #f9f9f9;
+}
+body *{
+	font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+	font-style: normal;
+	font-variant: normal;
+	color: #1c1212;
+}
+/*Main Subnav Section*/
+header#main-subnav {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	padding: 1% 0 2%;
+	border-top: 14px dashed #bd6462;
+	border-bottom: 1px solid #bd6462;
+	background-color: #cf6b69;
+	opacity: .6;
+	overflow: hidden;
+	z-index: 2;
+}
+
+/*--Navigation Menu--*/
+header#main-subnav .subnav-container {
+	overflow: hidden;
+	display: block;
+	width: 56%;
+	float: left;
+}
+
+header#main-subnav nav{
+	display: inline-block;
+	float: left;
+}
+
+header#main-subnav nav ul {
+	display: inline-block;
+	position: relative;
+}
+
+header#main-subnav nav ul li {
+	float: left;
+	padding: 4px 0;
+	margin-right: 4px;
+	border-right: 2px solid #bd6462;
+}
+
+header#main-subnav nav ul li:last-child {
+	border: 0 solid transparent;
+	margin-right: 0;
+}
+
+header#main-subnav nav ul li a {
+	padding: 0 10px;
+	text-decoration: none;
+	text-transform: capitalize;
+}
+
+header#main-subnav span {
+	font-size: 1.2em;
+	line-height: 10px;
+}
+header#main-subnav span.main-title {
+	float: left;
+	padding: 4px 0;
+	margin:0 4% 0 2%;
+	font-style: italic;
+}
+
+header#main-subnav span.main-title span {
+	font-weight: 800;
+	color: #fff;
+}
+
+header#main-subnav nav ul li a, 
+header#main-subnav span.main-title {
+	color: #ffffff;
+
+}
+
+/*--Search Box--*/
+header#main-subnav aside#search-box {
+	margin-right: 2%;
+	float: right;
+}
+
+header#main-subnav aside#search-box select.search-comboBox {
+	padding: 1.4px 10px;
+	font-weight: 800;
+	text-transform: capitalize;
+}
+
+header#main-subnav aside#search-box select.search-comboBox option {
+	font-style: italic;
+}
+
+header#main-subnav aside#search-box div#input-holder {
+	position: relative;
+}
+
+header#main-subnav aside#search-box div#input-holder input {
+	padding: 0 26px 0 8px;
+	line-height: 20px
+}
+
+header#main-subnav aside#search-box div#input-holder img{
+	position: absolute;
+	width: 20px;
+	top: 2px;
+	right: 3px;
+	cursor: pointer;
+}
+
+header#main-subnav aside#search-box select.search-comboBox,
+header#main-subnav aside#search-box div#input-holder {
+	float: left;
+}
+
+/*Blogs Section*/
+section#blogs {
+	margin-top: 8%;
+	padding: 0 2% 200px 2%; 
+	text-align: center;
+	overflow: hidden;
+}
+
+section#blogs div#blogs-container {
+	position: relative;
+	overflow: hidden;
+    margin: 0 auto;
+    max-width: 1240px;
+}
+
+section#blogs div#blogs-container div.blog{
+	width: 32%;
+	margin:0 2% 2% 0;
+	float: left;
+}
+
+section#blogs div#blogs-container div.blog:nth-child(3n+3) {
+	margin-right: 0;
+}
+
+section#blogs div#blogs-container div.blog .blog-image {
+	border-width: 1px 0 1px 0;
+	border-color: #000 transparent #000 transparent;
+	border-style: solid;
+	display: block;
+	max-height: 220px;
+	overflow: hidden;
+}
+
+section#blogs div#blogs-container div.blog .blog-image figure img {
+	width: 100%;
+}
+
+section#blogs div#blogs-container div.blog .blog-info {
+	margin-top: 2%;
+}
+
+section#blogs div#blogs-container div.blog .blog-info .blog-copy {
+	margin-bottom: 4%;
+	padding: 0 4px;
+	text-align: justify;
+}
+
+section#blogs div#blogs-container div.blog .blog-info .blog-link {
+	display: block;
+	font-style: italic;
+	text-align: right;
+	color: #bd6462;
+}
+
+section#blogs p.msg {
+	font-size: .8em;
+	font-style: italic;
+}
+
+section#blogs span.loader {
+	display: block;
+	width: 15px;
+	height: 15px; 
+	margin: 0 auto;
+	background-image: url("../images/ajax-loader.gif");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+
+}
+
+footer#main-footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	display: inline-block;
+	padding: 1% 0;
+	margin-top: 2%;
+	width: 100%;
+}
+
+footer#main-footer a#go-to-top {
+	display: none;
+	float: right;
+	margin-right: 2%;
+	cursor: pointer;
+}

@@ -1,0 +1,115 @@
+/*==============================
+=            Main (968px)            =
+==============================*/
+@media screen and (max-width: 968px) {
+
+	/*Main Subnav Section*/
+	body header#main-subnav .subnav-container {
+		width: 62%;
+	}
+
+	/*Blogs Section*/
+	body section#blogs {
+		margin-top: 10%;
+	}
+
+	body section#blogs div#blogs-container div.blog{
+		width: 48.5%;
+		margin: 0;
+		margin: 0 3% 2% 0;
+	}
+	
+	body section#blogs div#blogs-container div.blog:nth-child(3n+3) {
+		margin-right: 3%;
+	}
+
+	body section#blogs div#blogs-container div.blog:nth-child(2n+2) {
+		margin-right: 0;
+	}
+}
+/*=====  End of Main (968px)  ======*/
+
+
+/*==============================
+=            Main (768px)            =
+==============================*/
+@media screen and (max-width: 768px) {
+	
+	/*Main Subnav Section*/
+	body header#main-subnav .subnav-container {
+		width: 98%;
+	}
+
+	body header#main-subnav {
+		border-top: 14px dashed #4deac6;
+		border-bottom: 1px solid #4deac6;
+		background-color: #7db0a4;
+	}
+
+	body header#main-subnav nav {
+		float: right;
+	}
+
+	body header#main-subnav aside#search-box {
+		width: 50%;
+		float: left;
+		margin: 1% 1% 0 2%;
+		overflow: hidden;
+	}
+
+	header#main-subnav aside#search-box select.search-comboBox {
+		width: 200px;
+		margin: 2% 0 2px 0;
+	}
+
+	body header#main-subnav aside#search-box select.search-comboBox, 
+	body header#main-subnav aside#search-box div#input-holder {
+		width: 100%;
+	}
+
+	body header#main-subnav aside#search-box div#input-holder input {
+		width: 90%;
+	}
+
+	/*Blogs Section*/
+	body section#blogs {
+		margin-top: 22%;
+	}
+}
+/*=====  End of Main (768px)  ======*/
+
+/*==============================
+=            Main (600px)            =
+==============================*/
+@media screen and (max-width: 600px) {
+	
+	/*Main Subnav Section*/
+	body header#main-subnav aside#search-box {
+		width: 94%;
+		float: initial;
+		margin: 0 auto;
+	}
+	
+	body header#main-subnav aside#search-box div#input-holder input {
+		width: 93%;
+	}
+
+	/*Blogs Section*/
+	body section#blogs {
+		margin-top: 24%;
+	}
+
+	body section#blogs div#blogs-container div.blog{
+		width: 100%;
+		margin: 0 0 4% 0;
+	}
+}
+/*=====  End of Main (600px)  ======*/
+
+/*==============================
+=            Main (400px)            =
+==============================*/
+@media screen and (max-width: 400px) {
+
+}
+/*=====  End of Main (400px)  ======*/
