@@ -13,7 +13,7 @@ body *{
 	color: #1c1212;
 }
 /*Main Subnav Section*/
-header#main-subnav {
+header.mainHeader {
 	position: fixed;
 	width: 100%;
 	top: 0;
@@ -28,89 +28,101 @@ header#main-subnav {
 }
 
 /*--Navigation Menu--*/
-header#main-subnav .subnav-container {
-	overflow: hidden;
+header.mainHeader div.mainHeader__nav {
+	overflow: visible;
 	display: block;
 	width: 56%;
 	float: left;
 }
 
-header#main-subnav nav{
+header.mainHeader div.mainHeader__nav nav.mainHeader__nav__menu{
 	display: inline-block;
 	float: left;
 }
 
-header#main-subnav nav ul {
+header.mainHeader div.mainHeader__nav nav.mainHeader__nav__menu ul.mainHeader__nav__menu__list {
 	display: inline-block;
 	position: relative;
 }
 
-header#main-subnav nav ul li {
+header.mainHeader div.mainHeader__nav nav.mainHeader__nav__menu ul.mainHeader__nav__menu__list li.mainHeader__nav__menu__list__item {
+	position: relative;
 	float: left;
 	padding: 4px 0;
 	margin-right: 4px;
 	border-right: 2px solid #bd6462;
 }
 
-header#main-subnav nav ul li:last-child {
+header.mainHeader div.mainHeader__nav nav.mainHeader__nav__menu ul.mainHeader__nav__menu__list li.mainHeader__nav__menu__list__item--selected{
+	font-weight: 700;
+}
+
+header.mainHeader div.mainHeader__nav nav.mainHeader__nav__menu ul.mainHeader__nav__menu__list li.mainHeader__nav__menu__list__item:last-child {
 	border: 0 solid transparent;
 	margin-right: 0;
 }
 
-header#main-subnav nav ul li a {
+header.mainHeader div.mainHeader__nav nav.mainHeader__nav__menu ul.mainHeader__nav__menu__list li.mainHeader__nav__menu__list__item a {
 	padding: 0 10px;
 	text-decoration: none;
 	text-transform: capitalize;
 }
 
-header#main-subnav span {
+header.mainHeader span {
 	font-size: 1.2em;
 	line-height: 10px;
 }
-header#main-subnav span.main-title {
+header.mainHeader span.mainHeader__nav__title {
 	float: left;
 	padding: 4px 0;
 	margin:0 4% 0 2%;
 	font-style: italic;
 }
 
-header#main-subnav span.main-title span {
+header.mainHeader span.mainHeader__nav__title span.mainHeader__nav__title--bold {
 	font-weight: 800;
-	color: #fff;
+	text-shadow: 2px 2px 3px #545050;
+	color: #bd6462;
 }
 
-header#main-subnav nav ul li a, 
-header#main-subnav span.main-title {
+header.mainHeader div.mainHeader__nav nav.mainHeader__nav__menu ul.mainHeader__nav__menu__list li.mainHeader__nav__menu__list__item a, 
+header.mainHeader span.mainHeader__nav__title {
 	color: #ffffff;
 
 }
 
 /*--Search Box--*/
-header#main-subnav aside#search-box {
+header.mainHeader aside.mainHeader__search {
 	margin-right: 2%;
 	float: right;
 }
 
-header#main-subnav aside#search-box select.search-comboBox {
+header.mainHeader aside.mainHeader__search select.mainHeader__search__select {
 	padding: 1.4px 10px;
 	font-weight: 800;
 	text-transform: capitalize;
 }
 
-header#main-subnav aside#search-box select.search-comboBox option {
+header.mainHeader aside.mainHeader__search select.mainHeader__search__select option.mainHeader__search__select__item {
 	font-style: italic;
 }
 
-header#main-subnav aside#search-box div#input-holder {
-	position: relative;
+header.mainHeader aside.mainHeader__search select.mainHeader__search__select,
+header.mainHeader aside.mainHeader__search div.mainHeader__search__box {
+	float: left;
 }
 
-header#main-subnav aside#search-box div#input-holder input {
+header.mainHeader aside.mainHeader__search div.mainHeader__search__box {
+	position: relative;
+	margin-left: 2px;
+}
+
+header.mainHeader aside.mainHeader__search div.mainHeader__search__box input.mainHeader__search__box__input {
 	padding: 0 26px 0 8px;
 	line-height: 20px
 }
 
-header#main-subnav aside#search-box div#input-holder img{
+header.mainHeader aside.mainHeader__search div.mainHeader__search__box img.mainHeader__search__box__image{
 	position: absolute;
 	width: 20px;
 	top: 2px;
@@ -118,72 +130,68 @@ header#main-subnav aside#search-box div#input-holder img{
 	cursor: pointer;
 }
 
-header#main-subnav aside#search-box select.search-comboBox,
-header#main-subnav aside#search-box div#input-holder {
-	float: left;
-}
-
 /*Blogs Section*/
-section#blogs {
-	margin-top: 8%;
+section.blogs {
+	margin-top: 110px;
 	padding: 0 2% 200px 2%; 
 	text-align: center;
 	overflow: hidden;
 }
 
-section#blogs div#blogs-container {
+section.blogs div.blogs__container {
 	position: relative;
 	overflow: hidden;
     margin: 0 auto;
     max-width: 1240px;
 }
 
-section#blogs div#blogs-container div.blog{
+section.blogs div.blogs__container div.blogs__container__blog{
 	width: 32%;
 	margin:0 2% 2% 0;
 	float: left;
 }
 
-section#blogs div#blogs-container div.blog:nth-child(3n+3) {
+section.blogs div.blogs__container div.blogs__container__blog:nth-child(3n+3) {
 	margin-right: 0;
 }
 
-section#blogs div#blogs-container div.blog .blog-image {
+section.blogs div.blogs__container div.blogs__container__blog a.blogs__container__blog__head {
 	border-width: 1px 0 1px 0;
 	border-color: #000 transparent #000 transparent;
 	border-style: solid;
 	display: block;
-	max-height: 220px;
+	max-height: 200px;
 	overflow: hidden;
 }
 
-section#blogs div#blogs-container div.blog .blog-image figure img {
+section.blogs div.blogs__container div.blogs__container__blog a.blogs__container__blog__head img.blogs__container__blog__head__image {
 	width: 100%;
 }
 
-section#blogs div#blogs-container div.blog .blog-info {
+section.blogs div.blogs__container div.blogs__container__blog div.blogs__container__blog__info {
 	margin-top: 2%;
 }
 
-section#blogs div#blogs-container div.blog .blog-info .blog-copy {
+section.blogs div.blogs__container div.blogs__container__blog div.blogs__container__blog__info p.blogs__container__blog__info__copy {
 	margin-bottom: 4%;
 	padding: 0 4px;
 	text-align: justify;
 }
 
-section#blogs div#blogs-container div.blog .blog-info .blog-link {
+section.blogs div.blogs__container div.blogs__container__blog div.blogs__container__blog__info a.blogs__container__blog__info__link {
 	display: block;
 	font-style: italic;
 	text-align: right;
 	color: #bd6462;
 }
 
-section#blogs p.msg {
+section.blogs div.blogs__container p.blogs__container__msg {
 	font-size: .8em;
+	line-height: 20px;
 	font-style: italic;
 }
 
-section#blogs span.loader {
+section.blogs div.blogs__container span.blogs__container__loader {
 	display: block;
 	width: 15px;
 	height: 15px; 
@@ -195,7 +203,7 @@ section#blogs span.loader {
 
 }
 
-footer#main-footer {
+footer.mainFooter {
 	position: fixed;
 	bottom: 0;
 	left: 0;
@@ -205,7 +213,7 @@ footer#main-footer {
 	width: 100%;
 }
 
-footer#main-footer a#go-to-top {
+footer.mainFooter a.mainFooter__goToTop {
 	display: none;
 	float: right;
 	margin-right: 2%;

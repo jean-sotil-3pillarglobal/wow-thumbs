@@ -1,50 +1,66 @@
-if (!blogs.gallery) blogs.gallery = {};
 
-blogs.gallery = {
-	blogs : null,
-	init : function (){
-		this.getBlogsData();
-		this.attachEvents();
-	},
-	attachEvents : function (){
-		$("#input-holder img").on("click", $.proxy(function(evt){
-			if($("#search-box .search-comboBox").val() !="default"){
-				$("#blogs-container").html("<span class='loader'>")
-				this.loadBlogs();
-			}
-		}, this));
 
-		$("a#go-to-top").on("click", function(){
-			$("html, body").animate({ scrollTop: 0 }, "slow");
-		});
+var gallery = (function(){
+	core = {
+		blogs : null,
+		init : function (){
+			this.getBlogsData();
+			this.attachEvents();
+		},
+		attachEvents : function (){
 
-		$(window).ready(function(){
-			setTimeout(function(){
-				$("header#main-subnav").animate({opacity:1}, "swing");
-			}, 1000);
-		});
+			//Simulation ...Loading event handler 
+			this.$blogsContainer = $(".blogs div#blogs__container");
+			$(".mainHeader__search__box img#mainHeader__search__box__image").on("click", $.proxy(function(evt){
+				if($(".mainHeader__search select#mainHeader__search__select").val() !="default"){
+					this.$blogsContainer.html("<span class='blogs__container__loader'>")
+					this.loadBlogs();
+				}
+			}, this));
 
-		$(window).scroll($.proxy(function(e){
-			var win = e.currentTarget;
-			if($(win).scrollTop() > 400){
-				$("a#go-to-top").fadeIn(1000);
-			}else{
-				$("a#go-to-top").fadeOut(1000);
-			}
-		}, this));
-	},
-	getBlogsData : function (){
-		this.blogs = window.myDataBase;
-	},
-	loadBlogs : function (){
-		var source = $("#blog-template").html(),
-			template = Handlebars.compile(source);
-		setTimeout($.proxy(function(){
-			var html = "";
-			$.each(this.blogs, function(i, item){
-				html = html + template(item);
+			//goToTop handler
+			this.$goToTop = $(".mainFooter a#mainFooter__goToTop");
+			this.$goToTop.on("click", function(){
+				$("html, body").animate({ scrollTop: 0 }, "slow");
 			});
-			$("#blogs-container").html(html);
-		}, this), 2000);
+			$(window).scroll($.proxy(function(e){
+				var win = e.currentTarget;
+				if($(win).scrollTop() > 400){
+					this.$goToTop.fadeIn(1000);
+				}else{
+					this.$goToTop.fadeOut(1000);
+				}
+			}, this));
+
+			//Fadein Event
+			$(window).ready(function(){
+				setTimeout(function(){
+					$(".mainHeader").animate({opacity:1}, "swing");
+				}, 1000);
+			});
+
+		},
+		getBlogsData : function (){
+			//gets dummy data from ./data/data.js
+			this.blogs = window.myDataBase;
+		},
+		loadBlogs : function (){
+			var source = $("#blogTemplate").html(),
+				template = Handlebars.compile(source);
+			setTimeout($.proxy(function(){
+				var html = "";
+				$.each(this.blogs, function(i, item){
+					html = html + template(item);
+				});
+				this.$blogsContainer.html(html);
+			}, this), 2000);
+		}
 	}
-};
+
+	//return statement
+	return {
+		init: function(){
+			core.init();
+		}
+	}
+}());

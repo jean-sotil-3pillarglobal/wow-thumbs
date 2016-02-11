@@ -1,29 +1,25 @@
 /*==============================
 =            Main (968px)            =
 ==============================*/
-@media screen and (max-width: 968px) {
+@media screen and (max-width: 986px) {
 
 	/*Main Subnav Section*/
-	body header#main-subnav .subnav-container {
+	body header.mainHeader div.mainHeader__nav {
 		width: 62%;
 	}
 
 	/*Blogs Section*/
-	body section#blogs {
-		margin-top: 10%;
-	}
-
-	body section#blogs div#blogs-container div.blog{
+	body section.blogs div.blogs__container div.blogs__container__blog{
 		width: 48.5%;
 		margin: 0;
 		margin: 0 3% 2% 0;
 	}
 	
-	body section#blogs div#blogs-container div.blog:nth-child(3n+3) {
+	body section.blogs div.blogs__container div.blogs__container__blog:nth-child(3n+3) {
 		margin-right: 3%;
 	}
 
-	body section#blogs div#blogs-container div.blog:nth-child(2n+2) {
+	body section.blogs div.blogs__container div.blogs__container__blog:nth-child(2n+2) {
 		margin-right: 0;
 	}
 }
@@ -33,78 +29,171 @@
 /*==============================
 =            Main (768px)            =
 ==============================*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
 	
 	/*Main Subnav Section*/
-	body header#main-subnav .subnav-container {
-		width: 98%;
-	}
-
-	body header#main-subnav {
+	body header.mainHeader {
 		border-top: 14px dashed #4deac6;
 		border-bottom: 1px solid #4deac6;
 		background-color: #7db0a4;
 	}
 
-	body header#main-subnav nav {
+	body header.mainHeader span.mainHeader__nav__title span.mainHeader__nav__title--bold {
+		color: #4deac6;
+	}
+
+	body header.mainHeader div.mainHeader__nav {
+		width: 98%;
+	}
+
+	body header.mainHeader div.mainHeader__nav nav.mainHeader__nav__menu {
 		float: right;
 	}
 
-	body header#main-subnav aside#search-box {
-		width: 50%;
+	body header.mainHeader aside.mainHeader__search {
+		width: 98%;
 		float: left;
-		margin: 1% 1% 0 2%;
+		margin: 1% 1% 0 1%;
 		overflow: hidden;
 	}
 
-	header#main-subnav aside#search-box select.search-comboBox {
+	header.mainHeader aside.mainHeader__search select.mainHeader__search__select {
 		width: 200px;
-		margin: 2% 0 2px 0;
+		margin: 0 0 2px 0;
 	}
 
-	body header#main-subnav aside#search-box select.search-comboBox, 
-	body header#main-subnav aside#search-box div#input-holder {
-		width: 100%;
+
+	body header.mainHeader aside.mainHeader__search div.mainHeader__search__box {
+		margin-left: 1.5%;
 	}
 
-	body header#main-subnav aside#search-box div#input-holder input {
+	body header.mainHeader aside.mainHeader__search div.mainHeader__search__box input.mainHeader__search__box__input {
 		width: 90%;
 	}
 
+	body header.mainHeader aside.mainHeader__search select.mainHeader__search__select, 
+	body header.mainHeader aside.mainHeader__search div.mainHeader__search__box {
+		width: 48%;
+	}
+
 	/*Blogs Section*/
-	body section#blogs {
-		margin-top: 22%;
+	body section.blogs {
+		margin-top: 128px;
 	}
 }
 /*=====  End of Main (768px)  ======*/
 
 /*==============================
-=            Main (600px)            =
+=            Main (660px)            =
 ==============================*/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 660px) {
 	
 	/*Main Subnav Section*/
-	body header#main-subnav aside#search-box {
+	body header.mainHeader span.mainHeader__nav__title {
+		margin: 0 4%;
+	}
+
+	body header.mainHeader aside.mainHeader__search {
 		width: 94%;
 		float: initial;
 		margin: 0 auto;
+		overflow: hidden;
 	}
 	
-	body header#main-subnav aside#search-box div#input-holder input {
-		width: 93%;
+	body header.mainHeader aside.mainHeader__search div.mainHeader__search__box input.mainHeader__search__box__input {
+		padding: 0 18px 0 8px;
+		width: 95%;
+	}
+
+	body header.mainHeader aside.mainHeader__search select.mainHeader__search__select, 
+	body header.mainHeader aside.mainHeader__search div.mainHeader__search__box {
+		width: 100%;
+		margin-left: 0;
 	}
 
 	/*Blogs Section*/
-	body section#blogs {
+	body section.blogs {
 		margin-top: 24%;
 	}
 
-	body section#blogs div#blogs-container div.blog{
+	body section.blogs div.blogs__container div.blogs__container__blog{
 		width: 100%;
 		margin: 0 0 4% 0;
 	}
 }
-/*=====  End of Main (600px)  ======*/
+/*=====  End of Main (660px)  ======*/
+
+/*==============================
+=            Main (660px)            =
+==============================*/
+@media screen and (max-width: 600px) {
+	
+	/*Main Subnav Section*/
+	body header.mainHeader {
+		border-top: 14px dashed #ae9b9b;
+		border-bottom: 1px solid #ae9b9b;
+		background-color: #5e8aff;
+	}
+
+	body header.mainHeader span.mainHeader__nav__title {
+		width: 100%;
+		font-size: 2em;
+		line-height: 42px;
+		float: initial;
+		margin: 2% 0;
+	}
+
+	body header.mainHeader span.mainHeader__nav__title span.mainHeader__nav__title--bold {
+		color: #ae9b9b;
+	}
+
+	body header.mainHeader div.mainHeader__nav {
+		text-align: center;
+		width: 100%;
+	}
+
+	body header.mainHeader div.mainHeader__nav nav.mainHeader__nav__menu {
+		float: initial;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	body header.mainHeader div.mainHeader__nav nav.mainHeader__nav__menu ul.mainHeader__nav__menu__list {
+		width: 100%;
+	}
+
+	body header.mainHeader div.mainHeader__nav nav.mainHeader__nav__menu ul.mainHeader__nav__menu__list li.mainHeader__nav__menu__list__item {
+		width: 100%;
+		padding: 2% 0;
+		text-align: center;
+		border:1px dashed #4deac6;
+		border-top: 0 solid transparent;
+	}
+
+	body header.mainHeader aside.mainHeader__search {
+		width: 94%;
+		float: initial;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	
+	body header.mainHeader aside.mainHeader__search div.mainHeader__search__box input.mainHeader__search__box__input {
+		padding: 0 18px 0 8px;
+		width: 95%;
+	}
+
+	body header.mainHeader aside.mainHeader__search select.mainHeader__search__select, 
+	body header.mainHeader aside.mainHeader__search div.mainHeader__search__box {
+		width: 100%;
+		margin-left: 0;
+	}
+
+	/*Blogs Section*/
+	body section.blogs {
+		margin-top: 64%;
+	}
+}
+/*=====  End of Main (660px)  ======*/
 
 /*==============================
 =            Main (400px)            =
